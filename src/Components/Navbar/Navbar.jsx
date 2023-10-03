@@ -9,9 +9,18 @@ import {TbGridDots} from 'react-icons/tb'
 
 const Navbar = () => {
     const [active, setActive] = useState('navBar')
+
+  const showNav = ()=>{
+    setActive('navBar activeNavbar')
+  }
+  const removeNavbar = ()=>{
+    setActive('navBar')
+  }
+  
   return (
     <section className='navBarSection'>
-      <header className='header'>
+      <header className='header flex'>
+        
        <div className='logoDiv'>
         <a href="#" className="logo flex">
           <h1> <MdOutlineTravelExplore className='icon'/> Travel.</h1>  
@@ -49,15 +58,15 @@ const Navbar = () => {
            <a href='#' className='navLink'>Contact</a> 
           </li> 
 
-          <button className='btn'>
+          <button className="btn">
             <a href='#'>BOOK NOW</a>
           </button>
         </ul>
-        <div className="closeNavbar">
+        <div onClick={removeNavbar} className="closeNavbar">
            <AiFillCloseCircle className='icon'/> 
         </div>
       </div>
-      <div className="toggleNavbar">
+      <div onClick={showNav} className="toggleNavbar">
         <TbGridDots className='icon'/>
       </div>
       </header>

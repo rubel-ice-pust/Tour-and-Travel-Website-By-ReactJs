@@ -1,4 +1,5 @@
-::root{
+
+:root{
     --primaryColor:hsl(199, 100%, 33%);
     --SecondaryColor:hsl(187, 85%, 43%);
     --gradientColor:linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
@@ -37,6 +38,8 @@
         transform: translateY(5px);
       }
     }
+
+
    @media screen and (max-width: 768px) {
       .navBar{
         position: absolute;
@@ -44,13 +47,13 @@
         height: max-content;
         width: 80%;
         border-radius: 1rem;
-        top: 6rem;
+        top: --500rem;
         left: 50%;
         padding: 1rem;
         transform: translate(-50%);
         z-index: 2000;
         box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
-        transition: .3s ease-in-out;
+        transition: .5s ease-in-out;
 
 
         .navLists{
@@ -94,11 +97,22 @@
         }
 
       }
+
+     .activeNavbar{
+      top: 7rem;
+     }
     
    }
 
 
-   .toggle{
+   .toggleNavbar{
+      .icon{
+        font-size: 25px;
+        color: var(--primaryColor);
+      }
+      &:hover.icon{
+        color: var(--SecondaryColor);
+      }
        
    }
 }

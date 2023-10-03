@@ -7,7 +7,7 @@
   font-family: 'Poppins', sans-serif;
  }
 
- ::root{
+ :root{
        --primaryColor:hsl(199, 100%, 33%);
        --SecondaryColor:hsl(187, 85%, 43%);
        --gradientColor:linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
