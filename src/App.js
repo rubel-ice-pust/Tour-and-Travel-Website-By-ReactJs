@@ -5,13 +5,16 @@ import Home from './Components/Home/Home';
 import Main from './Components/Main/Main';
 import Navbar from './Components/Navbar/Navbar';
 
+
+  
+
 function App() {
   return (
    <>
     <Navbar/>
-    {/* <Home/>
+    <Home/>
     <Main/>
-    <Footer/>
+    {/* <Footer/>
      */}
    </>
   );
